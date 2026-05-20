@@ -65,7 +65,7 @@
          <string notr="true"/>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="Home">
          <layout class="QGridLayout" name="gridLayout_2">
@@ -282,7 +282,7 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>568</width>
+               <width>763</width>
                <height>922</height>
               </rect>
              </property>
@@ -369,42 +369,6 @@
                    <enum>QFrame::Shadow::Raised</enum>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_5">
-                   <item row="0" column="0">
-                    <layout class="QHBoxLayout" name="horizontalLayout_15">
-                     <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_8">
-                       <item>
-                        <widget class="QLabel" name="FirstPlane">
-                         <property name="text">
-                          <string>Plane:</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QLabel" name="DestinationLabel1">
-                         <property name="text">
-                          <string>Goes to:</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QLabel" name="LeavingDate1">
-                         <property name="text">
-                          <string>Departure Date:</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </item>
-                     <item>
-                      <widget class="QPushButton" name="FirstAvFlight">
-                       <property name="text">
-                        <string>Select</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
                    <item row="0" column="1">
                     <layout class="QHBoxLayout" name="horizontalLayout_14">
                      <item>
@@ -441,26 +405,26 @@
                      </item>
                     </layout>
                    </item>
-                   <item row="0" column="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_10">
+                   <item row="0" column="0">
+                    <layout class="QHBoxLayout" name="horizontalLayout_15">
                      <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_6">
+                      <layout class="QVBoxLayout" name="verticalLayout_8">
                        <item>
-                        <widget class="QLabel" name="ThirdPlane">
+                        <widget class="QLabel" name="FirstPlane">
                          <property name="text">
                           <string>Plane:</string>
                          </property>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLabel" name="DestinationLabel3">
+                        <widget class="QLabel" name="DestinationLabel1">
                          <property name="text">
                           <string>Goes to:</string>
                          </property>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLabel" name="LeavingDate3">
+                        <widget class="QLabel" name="LeavingDate1">
                          <property name="text">
                           <string>Departure Date:</string>
                          </property>
@@ -469,7 +433,7 @@
                       </layout>
                      </item>
                      <item>
-                      <widget class="QPushButton" name="ThirdAvFlight">
+                      <widget class="QPushButton" name="FirstAvFlight">
                        <property name="text">
                         <string>Select</string>
                        </property>
@@ -1081,36 +1045,6 @@
                <attribute name="verticalHeaderVisible">
                 <bool>false</bool>
                </attribute>
-               <column>
-                <property name="text">
-                 <string>Booking Number</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Departure Airport</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Arrival Airport</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Take-off Time</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Total Passengers</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Price</string>
-                </property>
-               </column>
               </widget>
              </item>
             </layout>
