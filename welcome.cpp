@@ -3,17 +3,17 @@
 #include "Qtprojecto.h"
 #include "login.h"
 #include"Qtags.h"
-#include "structs.h"
 
 welcome::welcome(QWidget *parent): QWidget(parent)
 {
 
-	setWindowTitle("Welcome Page");
+	setWindowTitle("welcome page");
+	this->setMinimumSize(1800, 1000);
 	this->setAttribute(Qt::WA_StyledBackground, true);
 
-	// Set welcome image
+	//creat imgae
 	image = new QLabel(this);
-	QPixmap pix("img/welcome.png");
+	QPixmap pix("D:/Qt.projecto/Qt.projecto/welcome.png.png");
 	image->move( 600, 100);
 
 	image->setPixmap(pix);
@@ -34,7 +34,7 @@ welcome::welcome(QWidget *parent): QWidget(parent)
 	tagsBtn->move(760, 800);
 	WapplyStyles();
 	
-	// Go to login function
+	//go to login function
 	connect(continueBtn, &QPushButton::clicked, this, [=]() {
 		Login* loginWin = new Login();
 		loginWin->show();
@@ -42,7 +42,7 @@ welcome::welcome(QWidget *parent): QWidget(parent)
 		});
 
 
-	// Go to tags function
+	//go to tags function
 
 	connect(tagsBtn, &QPushButton::clicked, this, [=]() {
 		Qtags* tags = new Qtags();
