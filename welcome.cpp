@@ -13,7 +13,7 @@ welcome::welcome(QWidget *parent): QWidget(parent)
 
 	//creat imgae
 	image = new QLabel(this);
-	QPixmap pix("D:/Qt.projecto/Qt.projecto/welcome.png.png");
+	QPixmap pix("img/welcome.png");
 	image->move( 600, 100);
 
 	image->setPixmap(pix);
