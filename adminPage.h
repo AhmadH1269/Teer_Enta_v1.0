@@ -23,36 +23,35 @@
 
 
 class AdminPage : public QWidget {
-    Q_OBJECT // We tell qt that is a smart object that ues smart features like signalls and slots
+    Q_OBJECT 
 
 public:
-    explicit AdminPage(QWidget* parent = nullptr); // Constructor
-  
+    
+    explicit AdminPage(int adminID, QWidget* parent = nullptr);
+
     ~AdminPage() {
         SAVE_DATA();
+        this->close();
     }
 
     void setAdminInfo(QString name);
     void loadUsersTable();
+    void loadAdminsTable();
+    void loadPlanesTable();
+    void loadAirportsCards();
 signals:
-    void logoutRequested(); // Signal to notify when logout is requested
-    void addAdminRequested(QString name, QString password);
-    void addPlaneModelRequested(QString manufacturer, QString model, int seats, double speed, double fuel);
+    void logoutRequested(); 
 private slots:
-    // To use when we want to update the array after editing the users table
+   
     void showAddUserDialog();
     void addPlaneToSystem();
     void showAddAdminDialog();
     void addAirportToSystem();
-    void updatePlaneModels();
+    void updateAirportCombo();
 
 
 private:
-
-    int actualUsersCount = 0;
-    int planesCount = 0;
-    int airportsCount = 0;
-    std::string planesInSystem[200][4];
+    int admin_ID; 
 
     // Declaraation
     QLabel* logoLabel;
@@ -67,18 +66,16 @@ private:
     QWidget* airportsContainer;
     QVBoxLayout* airportsCardsLayout;
     QScrollArea* airportsScrollArea;
-    QPushButton* refreshBtn;
     QComboBox* airportCombo;
     QLineEdit* airportEmailEdit;
     QLineEdit* airportPassEdit;
     QLineEdit* airportConfirmPassEdit;
     QLineEdit* airportCapacityEdit;
-    std::string airportsInSystem[20][2];
 
 
     QPushButton* addPlaneBtn;
     QPushButton* userManagmentBtn;
-    QPushButton* addUserBtn; // Not in the left sidebar 
+    QPushButton* addUserBtn; 
     QPushButton* addAdminBtn;
     QPushButton* logoutBtn;
 
@@ -86,10 +83,10 @@ private:
     QLabel* tableTitleLabel;
     QLabel* profilePicLabel;
     QLabel* adminNameLabel;
-  
-      // QWidget* addPlaneWidget;
-    QComboBox* manufacturerCombo;
-    QComboBox* modelCombo;
+
+    // QWidget* addPlaneWidget;
+    QLineEdit* manufacturerEdit;
+    QLineEdit* modelEdit;
     QLineEdit* planeSeatsEdit;
     QLineEdit* planeSpeedEdit;
     QLineEdit* planeFuelEdit;
@@ -99,10 +96,9 @@ private:
     void setupTables();
     void setupLayout();
     void setupAddPlaneForm();
-    // void updateArray(int row, int column);---> for debuging
     void setupConnections();
-    void setupEnterNavigation(QList<QLineEdit*> fields); // For better UI/UX 
+    void setupEnterNavigation(QList<QLineEdit*> fields); 
     void setupAddAirportForm();
 };
 
-#endif 
+#endif
