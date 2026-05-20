@@ -314,8 +314,10 @@ void SAVE_DATA() {
 	// Dump all data into the file
 	fstream out;
 	out.open("data.json", ios::out);
-	if (out.is_open())
+	if (out.is_open()) {
 		out << save.dump(4);
+		cout << save.dump(4);
+	}
 	else cerr << "Failed to save data\n";
 	out.close();
 	ofstream cities_out("cities.json");
@@ -367,9 +369,3 @@ void LOAD_DATA() {
 	for (int i = 0; i < load["admins"].size(); i++)
 		admins.push_back(JSON_to_admin(load["admins"][i]));
 }
-
-//int main() {
-//	LOAD_DATA();
-//	cout << admins[0].password;
-//
-//}
