@@ -38,7 +38,7 @@ welcome::welcome(QWidget *parent): QWidget(parent)
 	connect(continueBtn, &QPushButton::clicked, this, [=]() {
 		Login* loginWin = new Login();
 		loginWin->show();
-		this->close(); // Close welcome page
+		this->close(); 
 		});
 
 
